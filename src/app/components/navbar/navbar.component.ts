@@ -7,18 +7,17 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
   isLogged = false;
 
-  constructor(private router:Router, private tokenService:TokenService){
-
-  }
+  constructor(private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
       this.isLogged=true;
-    } else{
-      this.isLogged=false;
+    }else{
+      this.isLogged = false;
     }
   }
 
@@ -30,7 +29,4 @@ export class NavbarComponent implements OnInit {
   login(){
     this.router.navigate(['/login'])
   }
-
-
-
 }

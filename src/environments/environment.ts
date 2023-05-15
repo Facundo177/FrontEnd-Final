@@ -9,8 +9,8 @@ export const environment = {
     messagingSenderId: '9732962315',
   },
   production: false,
-  //URL:'http://localhost:8080/',
-  URL:'https://backend-portfolio-6rni.onrender.com/',
+  URL:'http://localhost:8080/',
+  //URL:'https://backend-portfolio-6rni.onrender.com/',
 };
 
 
