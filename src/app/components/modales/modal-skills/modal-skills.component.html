@@ -1,0 +1,90 @@
+            <!-- Modal Skills-->
+            <div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="skillsModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="skillsModalLabel">Editar Skills</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+                  <div class="modal-body">
+
+                      <div class="mb-3">
+                        <label for="SkillsTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="SkillsTitle" formControlName="titulo" [class.border-danger]="TituloInvalid">
+                      </div>
+
+                      <div *ngIf="Titulo?.errors && Titulo?.touched">
+                        <p *ngIf="Titulo?.hasError('required')" class="error">Introduzca un título.</p>
+                        <p *ngIf="Titulo?.errors?.['pattern']" class="error">El título no es válido.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="SkillsText" class="form-label">Texto</label>
+                        <textarea class="form-control" id="SkillsText" formControlName="texto" [class.border-danger]="TextoInvalid"></textarea>
+                      </div>
+
+                      <div *ngIf="Texto?.errors && Texto?.touched">
+                        <p *ngIf="Texto?.hasError('required')" class="error">Introduzca un texto.</p>
+                        <p *ngIf="Texto?.errors?.['pattern']" class="error">El texto no es válido.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="softSkill" checked>
+                          <label class="form-check-label" for="softSkill">
+                            Soft Skill
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="hardSkill">
+                          <label class="form-check-label" for="hardSkill">
+                            Hard Skill
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="idioma">
+                          <label class="form-check-label" for="idioma">
+                            Idioma
+                          </label>
+                        </div>
+                      </div>
+
+
+                      <div class="mb-3">
+                        <label for="SkillName" class="form-label">Skill</label>
+                        <input type="text" class="form-control" id="SkillName" formControlName="skill" [class.border-danger]="SkillInvalid">
+                      </div>
+
+                      <div *ngIf="Skill?.errors && Skill?.touched">
+                        <p *ngIf="Skill?.hasError('required')" class="error">Escriba una habilidad.</p>
+                        <p *ngIf="Skill?.errors?.['pattern']" class="error">La habilidad no es válida.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="SkillPorcentaje" class="form-label">Porcentaje</label>
+                        <input type="number" class="form-control" id="SkillPorcentaje" formControlName="porcentaje" [class.border-danger]="PorcentajeInvalid">
+                      </div>
+
+                      <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">
+                        <p *ngIf="Porcentaje?.hasError('required')" class="error">Introduzca un porcentaje que represente su maestría en dicha habilidad.</p>
+                        <p *ngIf="Porcentaje?.errors?.['max'] || Porcentaje?.errors?.['min']" class="error">El número debe estar entre 0 y 100.</p>
+                      </div>
+
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="submit" class="btn btn-primary">Confirmar</button>
+                    </div>
+
+                  </div>
+
+                </form>
+
+                </div>
+              </div>
+            </div>
+
+

@@ -1,0 +1,30 @@
+
+<section id="banner" class="banner" [ngStyle]="{'background-image': 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url(' + banner.img + ')'}">
+  <div class="container text-white text-center">
+    <div class="row">
+      <div class="col">
+        <h1>{{banner.nombre}}</h1>
+        <h2>{{banner.descripcion}}</h2>
+
+
+
+<!--         <ul class="list-inline m-0 mt-3">
+          <li class="list-inline-item">
+              <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit" data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa fa-edit"></i></button>
+          </li>
+          <li class="list-inline-item">
+              <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete"><i class="fa fa-trash"></i></button>
+          </li>
+        </ul> -->
+
+        <div class="col-lg-2">
+          <button type="button" routerLink="/editacerca/1" class="btn btn-dark" *ngIf="isLogged">Editar persona</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-modal-banner></app-modal-banner>

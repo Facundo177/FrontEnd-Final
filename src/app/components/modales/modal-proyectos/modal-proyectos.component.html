@@ -1,0 +1,225 @@
+            <!-- Modal Proyectos-->
+            <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="proyectosModalLabel">Editar Proyectos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+                  <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="exampleInputProyectoTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="exampleInputProyectoTitle" formControlName="titulo" [class.border-danger]="TituloInvalid">
+                      </div>
+
+                      <div *ngIf="Titulo?.errors && Titulo?.touched">
+                        <p *ngIf="Titulo?.hasError('required')" class="error">Introduzca un título.</p>
+                        <p *ngIf="Titulo?.errors?.['pattern']" class="error">El título no es válido.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputProyectoText" class="form-label">Texto</label>
+                        <textarea class="form-control" id="exampleInputProyectoText" formControlName="texto" [class.border-danger]="TextoInvalid"></textarea>
+                      </div>
+
+                      <div *ngIf="Texto?.errors && Texto?.touched">
+                        <p *ngIf="Texto?.hasError('required')" class="error">Introduzca un texto.</p>
+                        <p *ngIf="Texto?.errors?.['pattern']" class="error">El texto no es válido.</p>
+                      </div>
+
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="submit" class="btn btn-primary">Confirmar</button>
+                    </div>
+                  </div>
+
+                </form>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Modal Card 1 Proyectos-->
+            <div class="modal fade" id="1proyectoModal" tabindex="-1" aria-labelledby="1proyectoModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="1proyectoModalLabel">Editar Proyecto 1</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInput1proyecto" class="form-label">Imagen</label>
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput1proyectoLogo"  required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputProyectoTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="exampleInput1proyectoTitle">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputInfo" class="form-label">Información</label>
+                        <textarea class="form-control" id="exampleInput1proyectoInfo"></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInput1proyecto" class="form-label">Evidencia</label>
+                        <input type="text" placeholder="Inserte texto del botón" class="form-control" id="exampleInput1proyectoButton">
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput1proyectoImg">
+                        <input type="url" placeholder="Inserte url del sitio web" class="form-control" id="exampleInput1proyectoWeb">
+                      </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                  </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+            <!-- Modal Card 2 Proyectos-->
+            <div class="modal fade" id="2proyectoModal" tabindex="-1" aria-labelledby="2proyectoModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="2proyectoModalLabel">Editar Proyecto 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInput2proyecto" class="form-label">Imagen</label>
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput2proyectoLogo"  required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputProyectoTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="exampleInput2proyectoTitle">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputInfo" class="form-label">Información</label>
+                        <textarea class="form-control" id="exampleInput2proyectoInfo"></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInput2proyecto" class="form-label">Evidencia</label>
+                        <input type="text" placeholder="Inserte texto del botón" class="form-control" id="exampleInput2proyectoButton">
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput2proyectoImg">
+                        <input type="url" placeholder="Inserte url del sitio web" class="form-control" id="exampleInput2proyectoWeb">
+                      </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                  </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+            <!-- Modal Card 3 Proyectos-->
+            <div class="modal fade" id="3proyectoModal" tabindex="-1" aria-labelledby="3proyectoModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="3proyectoModalLabel">Editar Proyecto 3</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInput3proyecto" class="form-label">Imagen</label>
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput3proyectoLogo"  required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputProyectoTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="exampleInput3proyectoTitle">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputInfo" class="form-label">Información</label>
+                        <textarea class="form-control" id="exampleInput3proyectoInfo"></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInput3proyecto" class="form-label">Evidencia</label>
+                        <input type="text" placeholder="Inserte texto del botón" class="form-control" id="exampleInput3proyectoButton">
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInput3proyectoImg">
+                        <input type="url" placeholder="Inserte url del sitio web" class="form-control" id="exampleInput3proyectoWeb">
+                      </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                  </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+            <!-- Modal Proyecto Arduino-->
+            <div class="modal fade" id="arduinoModal" tabindex="-1" aria-labelledby="arduinoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <h3>Dado Digital</h3>
+                          <img src="assets/img/dado1.png" alt="Dado 1" class="img-fluid">
+                          <img src="assets/img/dado2.png" alt="Dado 2" class="img-fluid">
+                          <img src="assets/img/dado3.png" alt="Dado 3" class="img-fluid">
+                          <img src="assets/img/dado4.png" alt="Dado 4" class="img-fluid">
+                          <img src="assets/img/dado5.png" alt="Dado 5" class="img-fluid">
+                        </div>
+
+                        <div class="col-12 col-md-6 justify-content-center">
+                          <h3>Teclado</h3>
+                          <img src="assets/img/Tec1.png" alt="Teclado 1" class="img-fluid">
+                          <img src="assets/img/Tec2.png" alt="Teclado 2" class="img-fluid">
+                          <img src="assets/img/Tec3.png" alt="Teclado 3" class="img-fluid">
+                          <img src="assets/img/Tec4.png" alt="Teclado 4" class="img-fluid">
+                          <img src="assets/img/Tec5.png" alt="Teclado 5" class="img-fluid">
+                          <img src="assets/img/Tec6.png" alt="Teclado 6" class="img-fluid">
+                          <img src="assets/img/Tec7.png" alt="Teclado 7" class="img-fluid">
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+

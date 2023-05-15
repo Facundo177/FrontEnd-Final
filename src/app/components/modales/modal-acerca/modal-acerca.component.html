@@ -1,0 +1,88 @@
+            <!-- Modal img Perfil-->
+            <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="imgPerfilModalLabel">Editar Foto de Perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+                  <div class="modal-body">
+
+                      <div class="mb-3">
+                        <label for="exampleInputImgPerfil" class="form-label">Editar Imagen</label>
+                        <input type="url" placeholder="Inserte url de imagen" class="form-control" id="exampleInputImgPerfil"  required formControlName="foto" [class.border-danger]="FotoInvalid">
+                      </div>
+
+                      <div *ngIf="Foto?.errors && Foto?.touched">
+                        <p *ngIf="Foto?.hasError('required')" class="error">Introduzca la url de una imagen.</p>
+                        <!-- <p *ngIf="Foto?.errors?.['url']" class="error">La url no es válida.</p> -->
+                      </div>
+
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                      </div>
+
+                  </div>
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+                <!-- Modal Acerca-->
+                <div class="modal fade" id="acercaModal" tabindex="-1" aria-labelledby="acercaModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="acercaModalLabel">Editar Acerca de...</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                          <div class="mb-3">
+                            <label for="exampleInputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="exampleInputNombre" formControlName="nombre" [class.border-danger]="NombreInvalid">
+                          </div>
+
+                          <div *ngIf="Nombre?.errors && Nombre?.touched">
+                            <p *ngIf="Nombre?.hasError('required')" class="error">Introduzca su nombre.</p>
+                            <p *ngIf="Nombre?.errors?.['pattern']" class="error">El nombre no es válido.</p>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="exampleInputTitulo" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="exampleInputTitulo" formControlName="titulo" [class.border-danger]="TituloInvalid">
+                          </div>
+
+                          <div *ngIf="Titulo?.errors && Titulo?.touched">
+                            <p *ngIf="Titulo?.hasError('required')" class="error">Introduzca su título.</p>
+                            <p *ngIf="Titulo?.errors?.['pattern']" class="error">El título no es válido.</p>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="exampleInputInfo" class="form-label">Información</label>
+                            <textarea class="form-control" id="exampleInputInfo" formControlName="informacion" [class.border-danger]="InformacionInvalid"></textarea>
+                          </div>
+
+                          <div *ngIf="Informacion?.errors && Informacion?.touched">
+                            <p *ngIf="Informacion?.hasError('required')" class="error">Escriba algo sobre usted.</p>
+                            <p *ngIf="Informacion?.errors?.['pattern']" class="error">El texto no es válido.</p>
+                          </div>
+
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                      </div>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>

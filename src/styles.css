@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  background-color: gainsboro;
+}
+
+.section-padding{
+  padding: 100px 0;
+}
+
+
+
+section.banner{
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+section.banner .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+section.banner h1{
+  font-size: 4rem;
+}
+
+
+
+
+.navbar-brand{
+  width: 20%;
+  min-width: 250px;
+}
+
+
+.logoETHF{
+  width: 40%;
+}
+
+
+.imgInstructables{
+  width: 10vw;
+  min-width: 100px;
+  max-width: 150px;
+}
+
+
+
+
+
+.proyectos .card{
+  box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+}
+
+
+.skills .card{
+  box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+
+.logoCambridge{
+  width: 35%;
+}
+
+.logoHarvard{
+  width: 35%;
+}
+
+.ArgProg{
+  width: 70%;
+}
+
+.fa-brands.fa-square-github.fa-beat-fade:hover{
+  color: gray !important;
+}
+
+.fa-brands.fa-linkedin.fa-beat-fade:hover{
+  color: gray !important;
+}
+
+.fa-brands.fa-codepen.fa-beat-fade:hover{
+  color: gray !important;
+}
+
+p{
+  font-size: large;
+}
+
+.error{
+  color:red;
+  font-size: medium;
+}
+
+.border-danger{
+  border-color: red;
+}

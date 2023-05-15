@@ -1,0 +1,52 @@
+            <!-- Modal Experiencia-->
+            <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="experienciaModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="experienciaModalLabel">Editar Experiencia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                      <div class="mb-3">
+                        <label for="exampleInputExpTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="exampleInputExpTitle" formControlName="titulo" [class.border-danger]="TituloInvalid">
+                      </div>
+
+                      <div *ngIf="Titulo?.errors && Titulo?.touched">
+                        <p *ngIf="Titulo?.hasError('required')" class="error">Introduzca un título.</p>
+                        <p *ngIf="Titulo?.errors?.['pattern']" class="error">El título no es válido.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputExpText" class="form-label">Texto</label>
+                        <textarea class="form-control" id="exampleInputExpText" formControlName="texto" [class.border-danger]="TextoInvalid"></textarea>
+                      </div>
+
+                      <div *ngIf="Texto?.errors && Texto?.touched">
+                        <p *ngIf="Texto?.hasError('required')" class="error">Introduzca un texto.</p>
+                        <p *ngIf="Texto?.errors?.['pattern']" class="error">El texto no es válido.</p>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="experiencia" class="form-label">Experiencia</label>
+                        <input type="text" class="form-control" id="experiencia" formControlName="experiencia" [class.border-danger]="ExperienciaInvalid">
+                      </div>
+
+                      <div *ngIf="Experiencia?.errors && Experiencia?.touched">
+                        <p *ngIf="Experiencia?.hasError('required')" class="error">Escriba su experiencia.</p>
+                        <p *ngIf="Experiencia?.errors?.['pattern']" class="error">El texto escrito no es válido.</p>
+                      </div>
+
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                  </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+

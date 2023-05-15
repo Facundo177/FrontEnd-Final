@@ -1,0 +1,342 @@
+{
+  "nombre":"Facundo",
+  "apellido":"Gaitán Segura",
+  "nombreCompleto":"Facundo Gabriel Gaitán Segura",
+
+
+  "secciones":[
+    {
+      "id":1,
+      "titulo":"Graduado en Educación Secundaria Obligatoria con Especialización Electromecánica (Full Stack Developer Jr)",
+      "descripcion":"Estudiante de escuela técnica con especialización en electromecánica pronto a recibirme de Técnico Electromecánico. Con avanzado nivel de inglés y dispuesto a enfrentarme a desafíos con entusiasmo para adquirir nuevos conocimientos. Me adapto fácilmente a grupos de trabajo. Soy responsable y especialmente detallista a la hora de llevar a cabo un trabajo o proyecto, con el objetivo de lograr el mejor resultado dentro de mis posibilidades.",
+      "dataBsTarget":"#acercaModal"
+    },
+    {
+      "id":2,
+      "titulo":"Experiencia",
+      "descripcion":"No cuento con experiencia laboral pero me involucré en ciertos encargos para mi familia:",
+      "dataBsTarget":"#experienciaModal"
+    },
+    {
+      "id":3,
+      "titulo":"Educación",
+      "descripcion":"Actualmente estoy cursando el CBC de la UBA en la modalidad de UBA XXI. Hice mi educación secundaria en la Escuela Técnica Henry Ford con un promedio general de 9,09 y a la par realicé certificaciones de inglés. Comencé a aprender programación de forma autodidacta gracias a diversos tutoriales y cursos que tomé por internet, de los que destacan el CS50 y Argentina Programa.",
+      "dataBsTarget":"#educacionModal"
+    },
+    {
+      "id":4,
+      "titulo":"Hard & Soft Skills",
+      "descripcion":"",
+      "dataBsTarget":"#skillsModal"
+    },
+    {
+      "id":5,
+      "titulo":"Proyectos",
+      "descripcion":"Tanto en la escuela como en los diversos cursos realicé proyectos en los que apliqué diversas tecnologías como Arduino, Python o el stack de desarrollo web.",
+      "dataBsTarget":"#proyectosModal"
+    }
+  ],
+
+  "banner":
+    {
+      "titulo":"Proyecto Integrador",
+      "subtitulo":"Portfolio Web Full Stack",
+      "imagen":"assets/img/Puente-transformed2.jpeg"
+    },
+
+  "acerca":
+    {
+      "foto":"assets/img/IMG-20221130-WA00162-transformed2.jpeg",
+      "titulo":"Graduado en Educación Secundaria Obligatoria con Especialización Electromecánica (Full Stack Developer Jr)",
+      "descripcion":"Estudiante de escuela técnica con especialización en electromecánica pronto a recibirme de Técnico Electromecánico. Con avanzado nivel de inglés y dispuesto a enfrentarme a desafíos con entusiasmo para adquirir nuevos conocimientos. Me adapto fácilmente a grupos de trabajo. Soy responsable y especialmente detallista a la hora de llevar a cabo un trabajo o proyecto, con el objetivo de lograr el mejor resultado dentro de mis posibilidades."
+    },
+
+  "experiencias": [
+    {
+      "id":1,
+      "descripcion":"Me involucré en la publicidad de un emprendimiento familiar de alquileres en la costa, confeccioné un folleto informativo y edité un video publicitario para publicar en redes sociales."
+    },
+    {
+      "id":2,
+      "descripcion":"Fui encargado con la tarea de diseñar una planilla de consorcio para el pago de las expensas dentro del edificio en el que vive un familiar."
+    },
+    {
+      "id":3,
+      "descripcion":"De la misma forma, realicé una planilla de gastos mensuales del hogar."
+    }
+  ],
+
+  "educaciones": [
+    {
+      "id":1,
+      "imagen":"assets/img/logo512_f4b4cdb9e9.png",
+      "alt":"ETHF",
+      "classImg":"logoETHF",
+      "tituloCarta":"Escuela Técnica Henry Ford",
+      "descripcionCarta":"Completé los seis años de educación secundaria técnica (2017-2022) y actualmente me encuentro cursando las prácticas profesionalizantes (7º año).",
+      "boton":"Más información",
+      "href":"https://www.henryford.edu.ar",
+      "modal":false,
+      "target":"",
+      "dataBsTarget":"#1educacionModal"
+    },
+    {
+      "id":2,
+      "imagen":"assets/img/CAESEOR-1.png",
+      "alt":"FCE",
+      "classImg":"logoCambridge",
+      "tituloCarta":"Cambridge Assessment English",
+      "descripcionCarta":"Rendí satisfactoriamente el exámen First (FCE) de Cambridge en 2021 y obtuve la certificación de un nivel de inglés B2.",
+      "boton":"Certificado",
+      "href":"",
+      "modal":true,
+      "target":"#CertifFCEModal",
+      "dataBsTarget":"#2educacionModal"
+    },
+    {
+      "id":3,
+      "imagen":"assets/img/CAESEOR-1.png",
+      "alt":"CAE",
+      "classImg":"logoCambridge",
+      "tituloCarta":"Cambridge Assessment English",
+      "descripcionCarta":"Rendí satisfactoriamente el exámen Advanced (CAE) de Cambridge en 2022 y obtuve la certificación de un nivel de inglés C1.",
+      "boton":"Certificado",
+      "href":"",
+      "modal":true,
+      "target":"#CertifCAEModal",
+      "dataBsTarget":"#3educacionModal"
+    },
+    {
+      "id":4,
+      "imagen":"assets/img/Harvard-Logo.png",
+      "alt":"CS50",
+      "classImg":"logoHarvard",
+      "tituloCarta":"CS50",
+      "descripcionCarta":"En 2021 vi las clases en línea y realicé actividades del curso CS50, un curso introductorio de ciencias de la computación que se imparte en la Universidad de Harvard.",
+      "boton":"Más información",
+      "href":"https://www.youtube.com/playlist?list=PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4",
+      "modal":false,
+      "target":"",
+      "dataBsTarget":"#4educacionModal"
+    },
+    {
+      "id":5,
+      "imagen":"assets/img/argentina-programa-banner.png",
+      "alt":"Argentina Programa",
+      "classImg":"ArgProg mt-3",
+      "tituloCarta":"#SéProgramar",
+      "descripcionCarta":"Cursé la primera etapa del programa en 2022.",
+      "boton":"Certificado",
+      "href":"",
+      "modal":true,
+      "target":"#CertifSeProgModal",
+      "dataBsTarget":"#5educacionModal"
+    }
+  ],
+
+  "softSkills": [
+    {
+      "id":1,
+      "titulo":"Aprendizaje rápido",
+      "porcentaje":70
+    },
+    {
+      "id":2,
+      "titulo":"Paciencia",
+      "porcentaje":80
+    },
+    {
+      "id":3,
+      "titulo":"Pensamiento analítico",
+      "porcentaje":60
+    },
+    {
+      "id":4,
+      "titulo":"Trabajo en equipo",
+      "porcentaje":65
+    },
+    {
+      "id":5,
+      "titulo":"Atención al detalle",
+      "porcentaje":80
+    },
+    {
+      "id":6,
+      "titulo":"Organización",
+      "porcentaje":60
+    },
+    {
+      "id":7,
+      "titulo":"Compostura",
+      "porcentaje":80
+    }
+  ],
+
+  "hardSkills": [
+    {
+      "id":1,
+      "titulo":"HTML",
+      "porcentaje":70,
+      "color":"orange"
+    },
+    {
+      "id":2,
+      "titulo":"CSS",
+      "porcentaje":50,
+      "color":"dodgerblue"
+    },
+    {
+      "id":3,
+      "titulo":"Bootstrap",
+      "porcentaje":70,
+      "color":"blueviolet"
+    },
+    {
+      "id":4,
+      "titulo":"Angular",
+      "porcentaje":30,
+      "color":"crimson"
+    },
+    {
+      "id":5,
+      "titulo":"Typescript",
+      "porcentaje":20,
+      "color":"blue"
+    },
+    {
+      "id":6,
+      "titulo":"Javascript",
+      "porcentaje":10,
+      "color":"goldenrod"
+    },
+    {
+      "id":7,
+      "titulo":"Java",
+      "porcentaje":10,
+      "color":"firebrick"
+    },
+    {
+      "id":8,
+      "titulo":"Spring Boot",
+      "porcentaje":10,
+      "color":"forestgreen"
+    },
+    {
+      "id":9,
+      "titulo":"MySQL",
+      "porcentaje":10,
+      "color":"darkslategrey"
+    },
+    {
+      "id":10,
+      "titulo":"C",
+      "porcentaje":30,
+      "color":"darkslateblue"
+    },
+    {
+      "id":11,
+      "titulo":"Arduino / C++",
+      "porcentaje":40,
+      "color":"cornflowerblue"
+    },
+    {
+      "id":12,
+      "titulo":"Python",
+      "porcentaje":20,
+      "color":"darkgoldenrod"
+    },
+    {
+      "id":13,
+      "titulo":"AutoCad",
+      "porcentaje":30,
+      "color":"maroon"
+    },
+    {
+      "id":14,
+      "titulo":"Solid Edge",
+      "porcentaje":50,
+      "color":"steelblue"
+    },
+    {
+      "id":15,
+      "titulo":"Edición de video",
+      "porcentaje":40,
+      "color":"mediumseagreen"
+    },
+    {
+      "id":16,
+      "titulo":"Word",
+      "porcentaje":60,
+      "color":"royalblue"
+    },
+    {
+      "id":17,
+      "titulo":"Excel",
+      "porcentaje":50,
+      "color":"forestgreen"
+    },
+    {
+      "id":18,
+      "titulo":"Powerpoint",
+      "porcentaje":60,
+      "color":"orangered"
+    }
+  ],
+
+  "idiomaSkills": [
+    {
+      "id":1,
+      "titulo":"Inglés",
+      "porcentaje":70,
+      "color":"darkviolet"
+    }
+  ],
+
+  "proyectos": [
+    {
+      "id":1,
+      "imagen":"assets/img/sensor.jpg",
+      "alt":"Sensor de distancia",
+      "tituloCarta":"Sensor de Distancia por Ultrasonido",
+      "descripcionCarta":"Proyecto realizado en grupo durante la cursada del año 2022 para la escuela. El objetivo consistía en diseñar y construir un prototipo en base a elementos de Arduino, que se encargue de realizar algún tipo de medición. Mi tarea principal fue la de programar el Arduino y ayudar al armado del circuito eléctrico. Para más información, acceda a la página del proyecto en Instructables:",
+      "boton":"",
+      "imgBtn":true,
+      "srcImgBtn":"assets/img/instructables-logo-2023.svg",
+      "href":"https://www.instructables.com/Medidor-De-Distancia-Con-Sensor-Ultrasónico/",
+      "altBtn":"Logo Instructables",
+      "modal":false,
+      "target":"",
+      "dataBsTarget":"#1proyectoModal"
+    },
+    {
+      "id":2,
+      "imagen":"assets/img/Portfolio.png",
+      "alt":"Portfolio",
+      "tituloCarta":"Portfolio Web Full Stack",
+      "descripcionCarta":"Aplicación web full stack desarrollada entre 2022 y 2023, que cumple la función de portfolio digital. Aplica una gran cantidad de tecnologías para su arquitectura distribuida y su diseño responsive.",
+      "boton":"Acceder",
+      "imgBtn":false,
+      "srcImgBtn":"",
+      "href":"",
+      "altBtn":"",
+      "modal":false,
+      "target":"",
+      "dataBsTarget":"#2proyectoModal"
+    },
+    {
+      "id":3,
+      "imagen":"assets/img/Arduino.jpg",
+      "alt":"Arduino",
+      "tituloCarta":"Actividades en Arduino",
+      "descripcionCarta":"Realicé diferentes prácticas con elementos de Arduino en 2022, como pueden ser un Dado Digital, una Calculadora o un Teclado.",
+      "boton":"Código",
+      "imgBtn":false,
+      "srcImgBtn":"",
+      "href":"",
+      "altBtn":"",
+      "modal":true,
+      "target":"#arduinoModal",
+      "dataBsTarget":"#3proyectoModal"
+    }
+  ]
+}
