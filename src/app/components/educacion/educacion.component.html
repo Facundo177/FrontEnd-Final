@@ -9,12 +9,9 @@
                 </p>
 
 
-                  <ul class="list-inline my-2 text-center">
+                  <ul class="list-inline my-2 text-center" *ngIf="isLogged">
                     <li class="list-inline-item">
-                        <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit" ><i class="fa fa-edit"></i></button>
-                    </li>
-                    <li class="list-inline-item">
-                        <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete"><i class="fa fa-trash"></i></button>
+                      <button type="button" class="btn btn-dark" routerLink="/nuevaedu">Agregar Educacion</button>
                     </li>
                   </ul>
 
@@ -32,17 +29,14 @@
                     <h3 class="card-title">{{educacion.nombre}}</h3>
                     <p class="lead mx-1">{{educacion.descripcion}}</p>
 
+                    <a [href]="educacion.link" target="_blank"><button class="btn btn-warning text-dark">Más información</button></a>
 
-                      <a [href]="educacion.link" target="_blank"><button class="btn btn-warning text-dark">Más información</button></a>
-
-
-
-                    <ul class="list-inline mt-3 mb-0 text-center">
+                    <ul class="list-inline my-2 text-center" *ngIf="isLogged">
                       <li class="list-inline-item">
-                          <button class="btn btn-success btn-sm rounded-4" type="button" data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit" routerLink="/editedu/{{educacion.id}}"><i class="fa fa-edit"></i></button>
                       </li>
                       <li class="list-inline-item">
-                          <button class="btn btn-danger btn-sm rounded-4" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                        <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete" (click)="delete(educacion.id)"><i class="fa fa-trash"></i></button>
                       </li>
                     </ul>
 
@@ -50,47 +44,7 @@
             </div>
           </div>
 
-
       </div>
-
-
-
-
-
-
-          <div class="row">
-            <h1>Educacion</h1>
-            <div class="col-lg-2">
-                <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-                    Agregar Educacion
-                </button>
-            </div>
-
-            <div class="col lg 1"></div>
-            <div class="col-lg-11">
-                <table class="table">
-                    <tbody>
-                        <tr *ngFor="let Educacion of educacion">
-                            <td>
-                                <h2>{{Educacion.nombre}}</h2>
-                            </td>
-                            <td>{{Educacion.descripcion}}</td>
-                            <td *ngIf="isLogged">
-                                <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                                    <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                            </td>
-                            <td *ngIf="isLogged">
-                                <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                                    <i class="bi bi-trash-fill"></i> BORRAR</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-
 
   </div>
 </section>
@@ -98,6 +52,12 @@
 
 
           <hr>
+
+
+
+
+
+
 
 
 <!-- <app-modal-educacion></app-modal-educacion> -->

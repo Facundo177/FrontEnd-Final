@@ -1,8 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/sexperiencia-service';
 import { TokenService } from 'src/app/service/token.service';
-import { DatosService } from 'src/app/servicios/datos.service';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -48,6 +49,11 @@ export class ExperienciaComponent implements OnInit {
   }
 
 
+/*   Logged(){
+    return this.tokenService.getToken();
+  } */
+
+
 
   /*
   experiencias: any;
@@ -62,7 +68,6 @@ export class ExperienciaComponent implements OnInit {
   } */
 
 }
-
 
 
 

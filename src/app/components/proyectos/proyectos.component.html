@@ -6,16 +6,9 @@
                 <h2>Proyectos</h2>
                 <p>Tanto en la escuela como en los diversos cursos realicé proyectos en los que apliqué diversas tecnologías como Arduino, Python o el stack de desarrollo web.</p>
 
-
-<!--                   <ul class="list-inline my-2 text-center">
-                    <li class="list-inline-item">
-                        <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit" data-bs-toggle="modal" attr.data-bs-target="{{secciones[4].dataBsTarget}}"><i class="fa fa-edit"></i></button>
-                    </li>
-                    <li class="list-inline-item">
-                        <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete"><i class="fa fa-trash"></i></button>
-                    </li>
-                  </ul> -->
-
+                <button type="button" class="btn btn-dark" routerLink="/newproyecto" *ngIf="isLogged">
+                  Agregar Proyecto
+                </button>
 
             </div>
         </div>
@@ -33,6 +26,15 @@
 
 
                     <a [href]="proyecto.link" target="_blank"><button class="btn bg-warning text-dark">Más información</button></a>
+
+                    <ul class="list-inline mt-3 mb-0 text-center">
+                      <li class="list-inline-item">
+                          <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit" routerLink="/editproyecto/{{proyecto.id}}"><i class="fa fa-edit"></i></button>
+                      </li>
+                      <li class="list-inline-item">
+                          <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete" (click)="delete(proyecto.id)"><i class="fa fa-trash"></i></button>
+                      </li>
+                    </ul>
 
 
 <!--                     <div *ngIf="proyecto.imgBtn; else elseBlock">
@@ -54,14 +56,7 @@
                     </ng-template> -->
 
 
-                    <ul class="list-inline mt-3 mb-0 text-center">
-                      <li class="list-inline-item">
-                          <button class="btn btn-success btn-sm rounded-4" type="button" title="Edit"><i class="fa fa-edit"></i></button>
-                      </li>
-                      <li class="list-inline-item">
-                          <button class="btn btn-danger btn-sm rounded-4" type="button" title="Delete"><i class="fa fa-trash"></i></button>
-                      </li>
-                    </ul>
+
 
 
                 </div>
@@ -70,33 +65,8 @@
 
 
 
-        <div class="col-lg-2">
-          <button type="button" class="btn btn-dark" routerLink="/newproyecto" *ngIf="isLogged">
-              Agregar Proyecto
-          </button>
-        </div>
 
-        <div class="col lg 1"></div>
-        <div class="col-lg-11">
-            <table class="table">
-                <tbody>
-                    <tr *ngFor="let proyecto of proyecto">
-                        <td>
-                            <h2>{{proyecto.nombre}}</h2>
-                        </td>
-                        <td>{{proyecto.descripcion}}</td>
-                        <td *ngIf="isLogged">
-                            <button class="btn btn-light" routerLink="/editproyecto/{{proyecto.id}}">
-                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                        </td>
-                        <td *ngIf="isLogged">
-                            <button class="btn btn-danger" (click)="delete(proyecto.id)">
-                                <i class="bi bi-trash-fill"></i> BORRAR</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
 
 
 
@@ -164,7 +134,3 @@
 
 
 
-
-
-
-<app-modal-proyectos></app-modal-proyectos>
